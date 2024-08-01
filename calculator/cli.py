@@ -1,6 +1,6 @@
 import click
 
-from model import Calculator
+from calculator.model import Calculator
 
 
 @click.group()
@@ -26,7 +26,7 @@ def add(ctx: click.Context, a: float, b: float) -> None:
 @click.argument('b', type=float)
 @click.pass_context
 def subtract(ctx: click.Context, a: float, b: float) -> None:
-    """Add two numbers."""
+    """Subtract two numbers."""
     calculator = ctx.obj["calculator_object"]
     result = calculator.subtract(a, b)
     click.echo(result)
