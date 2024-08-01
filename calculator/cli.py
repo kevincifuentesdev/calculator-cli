@@ -1,6 +1,6 @@
 import click
 
-from app.model import Calculator
+from model import Calculator
 
 
 @click.group()
